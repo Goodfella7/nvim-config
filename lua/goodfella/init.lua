@@ -1,0 +1,10 @@
+print("hello from goodfella")
+
+require("goodfella.remap")
+require("goodfella.lazy")
+require("goodfella.treesitter")
+require("goodfella.colors")
+require("goodfella.lsp")
+require("goodfella.cmp")
+require("goodfella.mason")
+require("goodfella.dap")
