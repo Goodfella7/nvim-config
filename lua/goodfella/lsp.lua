@@ -2,7 +2,19 @@
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('pyright')
 vim.lsp.enable('bashls')
-vim.lsp.enable('clangd')
+
+vim.lsp.start({
+  name = "clangd",
+  cmd = {
+    "/home/goodfella/.local/share/nvim/mason/bin/clangd",
+    "--compile-commands-dir=build",
+  },
+  root_dir = vim.fs.root(0, {
+    "compile_commands.json",
+    "CMakeLists.txt",
+    ".git" 
+  }),
+})
 
  
 vim.diagnostic.config({
